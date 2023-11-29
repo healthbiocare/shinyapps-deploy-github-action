@@ -6,10 +6,8 @@ FROM rocker/shiny-verse:latest
 # install rsconnect and renv packages, as well as prerequisite libraries
 RUN apt-get update && apt-get install -y \
     libssl-dev \
-    libcurl4-openssl-dev \
-    libsodium
+    libcurl4-openssl-dev
 RUN install2.r rsconnect renv
-RUN install2.r sodium
 
 # copy deploy script to root of the workspace
 COPY deploy.R /deploy.R
