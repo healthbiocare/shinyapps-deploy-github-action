@@ -33,6 +33,8 @@ jobs:
           # token and secret obtained from https://www.shinyapps.io/admin/#/tokens
           accountToken: ${{ secrets.SHINYAPPS_TOKEN }}
           accountSecret: ${{ secrets.SHINYAPPS_SECRET }}
+          #updates the shiny app
+          forceUpdate: true
 ```
 
 ## Inputs
