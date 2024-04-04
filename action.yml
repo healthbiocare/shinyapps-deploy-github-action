@@ -1,4 +1,4 @@
-name: "Deploy to shinyapps.io"
+name: "Deploy to shinyapps.io with updates"
 description: "Deploy R shiny apps to shinyapps.io."
 branding:
   icon: cast
