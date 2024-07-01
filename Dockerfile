@@ -1,7 +1,9 @@
 # start from shiny-verse to include both the shiny and tidyverse packages,
 # saving us time assuming that the app to be deployed doesn't have dependencies
 # locked to different versions.
-FROM rocker/shiny-verse:latest
+# HBC NOTE: We set a specific R version for this docker image, because sometimes the 
+# "latest" version was not supported by the Linux version used in the GH Actions process.
+FROM rocker/shiny-verse:4.4.1
 
 # install rsconnect and renv packages, as well as prerequisite libraries
 RUN apt-get update && apt-get install -y \
